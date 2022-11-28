@@ -1,9 +1,9 @@
 import { Sequelize,DataTypes } from 'sequelize'
 
 
-const sequelize = new Sequelize('mysql://127.0.0.1:4000/test?user=root')
+const sequelize = new Sequelize('mysql://127.0.0.1:4000/test?user=root')     // using Sequilize orm to connect to local tiDB
 
-const taskModel = sequelize.define('Tasks',{
+const taskModel = sequelize.define('Tasks',{                                 // creating a Model to store Tasks table
     id : {
         type : DataTypes.INTEGER,
         autoIncrement : true,
